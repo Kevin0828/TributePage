@@ -77,6 +77,11 @@ nav
 
 @media only screen and (max-width: 1228px) 
 {
+    body
+    {
+        overflow-x: hidden;
+    }
+    
     .nav-links 
     {
         width: 50%;
