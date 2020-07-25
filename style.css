@@ -34,7 +34,7 @@ nav
 {
     display: flex;
     justify-content: space-around;
-    width: 30%;
+    width: 20%;
     
 }
 
@@ -95,7 +95,7 @@ nav
        position: absolute;
        right: 0px;
        height: 100%;
-       top: 4vh;
+       top: 6vh;
        background-color: black;
        display: flex;
        flex-direction: column;
