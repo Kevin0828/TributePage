@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 header
@@ -35,6 +35,7 @@ nav
     display: flex;
     justify-content: space-around;
     width: 30%;
+    
 }
 
 
@@ -77,11 +78,6 @@ nav
 
 @media only screen and (max-width: 1228px) 
 {
-    body
-    {
-        overflow-x: hidden;
-    }
-    
     .nav-links 
     {
         width: 50%;
@@ -89,19 +85,17 @@ nav
 }
 
 
+
+
+
 @media only screen and (max-width: 768px) 
 {
-    body
-    {
-        overflow-x: hidden;
-    }
-
     .nav-links
     {
        position: absolute;
        right: 0px;
-       height: 96vh;
-       top: 6vh;
+       height: 100%;
+       top: 4vh;
        background-color: black;
        display: flex;
        flex-direction: column;
@@ -120,15 +114,24 @@ nav
     {
         display: block;
     }
+
+    .logo
+    {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (max-width: 370px) 
 {
     .logo
     {
-        font-size: 14px;
+        font-size: 10px;
     }
 }
+
+
+
+
 
 @keyframes navLinkFade 
 {
@@ -147,6 +150,7 @@ nav
 .nav-active
 {
     transform: translateX(0%);
+    
 }
 
 
