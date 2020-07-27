@@ -1,14 +1,26 @@
-body{
+body, html{
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    background-color: white;
+    height:100%;
+    margin:0;
+    font-size:14px;
+    font-family: 'Lexend Zetta', sans-serif;
+    font-weight:400;
+    line-height:1.8em;
+    scroll-behavior: smooth;
+    z-index: -1;
+
 }
 
+
+/*
 header
 {
     height: 8vh;
     background-color: black;
-    
 }
+*/
 
 nav
 {
@@ -17,7 +29,17 @@ nav
     min-height: 8vh;
     align-items: center;
     background-color: black;
-    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0px;
+    z-index: 1;
+}
+
+.year-fieldset
+{
+    font-size: 18px;
+
 }
 
 
@@ -27,18 +49,19 @@ nav
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 20px;
+}
+
+.logo-text
+{
+    font-size: 15px;
 }
 
 .nav-links 
 {
     display: flex;
     justify-content: space-around;
-    width: 20%;
-    
+    width: 40%;
 }
-
-
 .nav-links li
 {
     list-style: none;
@@ -90,6 +113,12 @@ nav
 
 @media only screen and (max-width: 768px) 
 {
+
+    .horizontal-var
+    {
+        display: none;
+    }
+
     .nav-links
     {
        position: absolute;
@@ -103,21 +132,19 @@ nav
        width: 100%;
        transform: translateX(100%);
        transition: transform 0.5s ease-in;
+       z-index: 3;
+       overflow: hidden;
     }
-
+    
     .nav-links li
     {
         opacity: 0;
     }
+    
 
     .burger
     {
         display: block;
-    }
-
-    .logo
-    {
-        font-size: 20px;
     }
 }
 
@@ -128,8 +155,6 @@ nav
         font-size: 10px;
     }
 }
-
-
 
 
 
@@ -165,3 +190,110 @@ nav
 .toggle .line3{
     transform: rotate(45deg) translate(-18px, 0px);
 }
+
+
+/**********************************NAV CONTENT ENDS******************************/
+
+
+
+/*******************************CENTER CONTENT STARTS****************************/
+
+#main
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+.welcome-image, 
+.about-image, 
+.earlylife-image, 
+.famous-image, 
+.drama-image{
+    position:relative;
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+  }
+
+
+.welcome-image{
+    background-image:url('welcome.gif');
+    min-height: 100%;
+    width:100%;
+}
+
+.about-image
+{
+    background-image:url('about-img.jpg');
+    min-height:400px;
+}
+
+.earlylife-image
+{
+    background-image:url('earlylife-img.jpg');
+    min-height:400px;
+}
+
+.famous-image
+{
+    background-image:url('famous-img.jpg');
+    min-height:400px;
+}
+
+.drama-image
+{
+    background-image:url('drama-img.jpg');
+    min-height:400px;
+}
+
+
+
+.img-text
+{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  font-size:27px;
+  letter-spacing:10px;
+  text-transform:uppercase;
+  background-color:transparent;
+  color: white;
+}
+
+
+.section
+{
+    padding:50px 80px;
+    background-color:#f4f4f4;
+    color:#666;
+    text-align: justify;
+    text-justify: inter-word;
+    left: 50%;
+    margin: 0 auto;
+    width: 600px;
+    background-color:transparent;
+
+}
+
+
+
+@media only screen and (max-width: 1000px) 
+{
+
+    body
+    {
+        font-size: 12px;
+        text-align: left ;
+        text-justify: auto;
+    }
+
+    .section
+    {
+       width: fit-content;
+    }
+   
+}
+
